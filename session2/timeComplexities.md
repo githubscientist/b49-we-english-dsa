@@ -301,6 +301,69 @@ N = 40; j = 2, 4, 8, 16, 32 => 5 executions
 For a given value of N, the total number of executions is log2(N)
 
 Total Time Complexity T(N)
-= 1 + N/2 * log2(N)
-= N/2 * log2(N)
+= 1 + N/2 _ log2(N)
+= N/2 _ log2(N)
 = O(N log N)
+
+O(N!)
+
+Problem: Given a list of numbers, find the number of ways in which we can select a number from the list and print it.
+
+Example:
+
+Input: [1, 2, 3]
+
+Output: 8 ways
+
+0 values => [] => 1 way
+1 value => [1], [2], [3] => 3 ways
+2 values => [1, 2], [1, 3], [2, 3] => 3 ways
+3 values => [1, 2, 3] => 1 way
+
+Input: [1, 2, 3, 4]
+
+Output: 16 ways
+
+0 values => [] => 1 way
+1 value => [1], [2], [3], [4] => 4 ways
+2 values => [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4] => 6 ways
+3 values => [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4] => 4 ways
+4 values => [1, 2, 3, 4] => 1 way
+
+For N = 3, total number of ways = 1 + 3 + 3 + 1 = 8
+For N = 4, total number of ways = 1 + 4 + 6 + 4 + 1 = 16
+For N = 5, total number of ways = 1 + 5 + 10 + 10 + 5 + 1 = 32
+
+For a given value of N, the total number of ways is 2^N
+
+Total Time Complexity T(N)
+= O(2^N)
+
+Problem: Given a string S, find the number of permutations of the string.
+
+Example:
+
+Input: "abc"
+
+Output: 6
+
+"abc", "acb", "bac", "bca", "cab", "cba"
+
+Input: "abcd"
+
+Output: 24
+
+"abcd", "abdc", "acbd", "acdb", "adbc", "adcb", "bacd", "badc", "bcad", "bcda", "bdac", "bdca", "cabd", "cadb", "cbad", "cbda", "cdab", "cdba", "dabc", "dacb", "dbac", "dbca", "dcab", "dcba"
+
+For N = 3, total number of permutations = 3! = 6
+For N = 4, total number of permutations = 4! = 24
+
+3! = 3 * 2 * 1
+4! = 4 * 3 * 2 * 1
+
+N! = N * (N-1) * (N-2) * ... 3 * 2 * 1
+
+For a given value of N, the total number of permutations is N!
+
+Total Time Complexity T(N)
+= O(N!)
